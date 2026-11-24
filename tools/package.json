@@ -1,0 +1,16 @@
+{
+  "name": "myportfolio-tools",
+  "private": true,
+  "description": "Regenerates the résumé PDF, social card, and QR code, and runs visual QA with headless Edge or Chrome.",
+  "type": "module",
+  "scripts": {
+    "assets": "node make-assets.mjs",
+    "qa": "node qa.mjs"
+  },
+  "devDependencies": {
+    "jsqr": "^1.4.0",
+    "playwright-core": "1.65.1",
+    "pngjs": "^7.0.0",
+    "qrcode": "^1.5.4"
+  }
+}

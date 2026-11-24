@@ -1,286 +1,419 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
-    <title>My Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Susheel Mondithoka — Engineering Manager, Distributed Systems &amp; AI</title>
+  <meta name="description" content="Engineering manager in Toronto. Java microservices, Kafka, and Azure for banking platforms, now applied to AI agents and retrieval.">
+  <link rel="canonical" href="https://susheel009.github.io/myportfolio/">
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Susheel Mondithoka">
+  <meta property="og:title" content="Susheel Mondithoka — Engineering Manager">
+  <meta property="og:description" content="Distributed systems and applied AI. Java, Kafka, and Azure for banking platforms.">
+  <meta property="og:url" content="https://susheel009.github.io/myportfolio/">
+  <meta property="og:image" content="https://susheel009.github.io/myportfolio/assets/img/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Susheel Mondithoka, Engineering Manager — Distributed Systems and AI, Toronto">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0e1412">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
+  <link rel="stylesheet" href="assets/vendor/lenis.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script defer src="assets/vendor/gsap.min.js"></script>
+  <script defer src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script defer src="assets/vendor/SplitText.min.js"></script>
+  <script defer src="assets/vendor/lenis.min.js"></script>
+  <script defer src="assets/js/site.js"></script>
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"><span></span></div>
 
-    <header class="header">
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Susheel Mondithoka, back to top">
+      <span class="monogram" aria-hidden="true"><span>SM</span></span>
+      <span class="brand-name">Susheel Mondithoka</span>
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#profile">Profile</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+      <span class="nav-indicator" aria-hidden="true"></span>
+    </nav>
+    <a class="pill" href="assets/files/Susheel-Mondithoka-Resume.pdf" download>
+      Résumé
+      <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v8m0 0 3.5-3.5M8 10 4.5 6.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </header>
 
-        <div class="logo">
-            <p>Portfolio</p>
+  <main id="main" tabindex="-1">
+    <!-- Hero: who, what, and the at-a-glance facts a recruiter scans first -->
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Engineering Manager · Distributed Systems &amp; AI</p>
+          <h1 class="hero-title"><span class="line"><span>Susheel</span></span><span class="line"><span>Mondithoka</span></span></h1>
+          <p class="hero-lede">I lead engineering delivery for banking platforms: fraud detection, authentication, and payment events moving through Java microservices and Kafka. Now I’m applying that integration background to AI agents and retrieval.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="assets/files/Susheel-Mondithoka-Resume.pdf" download>
+              Download résumé
+              <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v8m0 0 3.5-3.5M8 10 4.5 6.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="button" href="#experience">Experience</a>
+            <a class="button" href="https://github.com/susheel009" rel="me">
+              GitHub
+              <svg width="12" height="12" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5 11.5 4.5M6 4.5h5.5V10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero-side">
+          <aside class="glance" aria-label="At a glance">
+            <span class="hud hud-tl" aria-hidden="true"></span><span class="hud hud-tr" aria-hidden="true"></span>
+            <span class="hud hud-bl" aria-hidden="true"></span><span class="hud hud-br" aria-hidden="true"></span>
+            <div class="glance-head">
+              <img class="glance-photo" src="assets/img/portrait.jpg" alt="Susheel Mondithoka" width="88" height="88">
+              <div>
+                <p class="glance-role">Manager, Deloitte Canada</p>
+                <p class="glance-place">Toronto, Ontario</p>
+              </div>
+            </div>
+            <dl class="glance-list">
+              <div><dt>Domain</dt><dd>Fraud, authentication &amp; payments</dd></div>
+              <div><dt>Platform</dt><dd>Java · Spring Boot · Kafka · Azure</dd></div>
+              <div><dt>Applied AI</dt><dd>Agents · RAG · evaluation</dd></div>
+              <div><dt>Leadership</dt><dd>Planning · code approval · mentoring</dd></div>
+              <div><dt>Languages</dt><dd>English · Telugu · Tamil · Hindi</dd></div>
+            </dl>
+          </aside>
+        </div>
+      </div>
+      <p class="scroll-cue" aria-hidden="true"><span>Scroll</span><i></i></p>
+    </section>
+
+    <!-- Profile: the summary, read at the pace of the scroll -->
+    <section class="statement" id="profile" aria-labelledby="profile-label">
+      <div class="wrap">
+        <p class="eyebrow" id="profile-label">01 · Profile</p>
+        <p class="statement-text">My work has focused on systems that move money and decide whom to trust: payments, fraud detection, and authentication for large banks. As a manager, I own what keeps delivery predictable — estimates, design reviews, code approval, release sequencing, and mentoring.</p>
+        <div class="facts">
+          <div><span class="fact-k">Recognition</span><span class="fact-v">Deloitte Supernova award</span></div>
+          <div><span class="fact-k">Hiring</span><span class="fact-v">Technical interviewer for Java and event-driven roles</span></div>
+          <div><span class="fact-k">Learning</span><span class="fact-v">Databricks Academy agent courses · AZ-104 in progress</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience: pinned on desktop; a plain timeline everywhere else -->
+    <section class="xp" id="experience" aria-labelledby="xp-title">
+      <div class="xp-stage">
+        <div class="xp-side">
+          <p class="eyebrow">02 · Experience</p>
+          <h2 class="xp-heading" id="xp-title">Experience</h2>
+          <p class="xp-sub">Hyderabad to Toronto. Developer to manager.</p>
+          <div class="xp-index-wrap">
+            <ol class="xp-index" aria-label="Jump to a role">
+              <li><button type="button" class="xp-jump"><span class="xp-dates">2016 – 2017</span><span class="xp-title">Analyst / Developer</span><span class="xp-org">Zack IT Solutions</span></button></li>
+              <li><button type="button" class="xp-jump"><span class="xp-dates">2017 – 2020</span><span class="xp-title">Software Analyst / Developer</span><span class="xp-org">Horizon Informatic Services</span></button></li>
+              <li><button type="button" class="xp-jump"><span class="xp-dates">2020 – 2022</span><span class="xp-title">PG Diploma</span><span class="xp-org">Lambton College</span></button></li>
+              <li><button type="button" class="xp-jump"><span class="xp-dates">2022 – 2024</span><span class="xp-title">Full Stack Java Developer</span><span class="xp-org">Scadea Software Solutions</span></button></li>
+              <li><button type="button" class="xp-jump"><span class="xp-dates">2024 – 2025</span><span class="xp-title">Java Systems Developer</span><span class="xp-org">Allevar Inc.</span></button></li>
+              <li><button type="button" class="xp-jump"><span class="xp-dates">2025 – Present</span><span class="xp-title">Manager</span><span class="xp-org">Deloitte Canada</span></button></li>
+            </ol>
+            <span class="xp-rail" aria-hidden="true"><span class="xp-rail-fill"></span></span>
+          </div>
         </div>
 
-        <nav class="nav">
-            <ul class="nav-links">
-                <li>Home</li>
-                <li>Service</li>
-                <li>Quote</li>
-                <li>Clients</li>
+        <div class="xp-main">
+          <p class="xp-year" aria-hidden="true"><span class="xp-year-track"><span>2016</span><span>2017</span><span>2020</span><span>2022</span><span>2024</span><span>2025</span></span></p>
+
+          <div class="xp-panels">
+            <article class="xp-panel">
+              <p class="xp-meta">Apr 2016 – Jan 2017 · Hyderabad, India</p>
+              <h3>Analyst / Developer</h3>
+              <p class="xp-employer">Zack IT Solutions</p>
+              <ul class="xp-points">
+                <li>Supported Java application development: bug fixes, small enhancements, SQL, and data-processing tasks.</li>
+                <li>Troubleshot service integrations, validating requests and responses across dependent systems.</li>
+                <li>Prepared technical documentation and supported releases in an Agile team.</li>
+              </ul>
+              <ul class="chips" aria-label="Skills"><li>Java</li><li>SQL</li></ul>
+            </article>
+
+            <article class="xp-panel">
+              <p class="xp-meta">Feb 2017 – Feb 2020 · Hyderabad, India</p>
+              <h3>Software Analyst / Developer</h3>
+              <p class="xp-employer">Horizon Informatic Services</p>
+              <ul class="xp-points">
+                <li>Developed Java services with Spring MVC for transactional enterprise workflows.</li>
+                <li>Built REST and SOAP integrations, and designed MySQL schemas, indexes, and queries.</li>
+                <li>Secured APIs with Spring Security and token-based access; handled root-cause analysis and production support.</li>
+              </ul>
+              <ul class="chips" aria-label="Skills"><li>Spring MVC</li><li>REST &amp; SOAP</li><li>MySQL</li></ul>
+            </article>
+
+            <article class="xp-panel">
+              <p class="xp-meta">Mar 2020 – May 2022 · Toronto, Ontario · Education</p>
+              <h3>PG Diploma, Project Management and Advanced Leadership Skills</h3>
+              <p class="xp-employer">Lambton College</p>
+              <ul class="xp-points">
+                <li>Moved to Toronto for postgraduate study in project management and leadership.</li>
+              </ul>
+              <ul class="chips" aria-label="Skills"><li>Project management</li><li>Leadership</li></ul>
+            </article>
+
+            <article class="xp-panel">
+              <p class="xp-meta">Sep 2022 – Jan 2024 · Mississauga, Ontario · Client: global bank</p>
+              <h3>Full Stack Java Developer</h3>
+              <p class="xp-employer">Scadea Software Solutions</p>
+              <ul class="xp-points">
+                <li>Built an Angular and Spring Boot compliance dashboard that automated tracking and reporting for loan-processing teams.</li>
+                <li>Helped modernize a legacy banking platform, integrating a monolith with microservices.</li>
+                <li>Added Splunk logging and Kibana observability; resolved incidents across several banking modules.</li>
+              </ul>
+              <ul class="chips" aria-label="Skills"><li>Spring Boot</li><li>Angular</li><li>Microservices</li></ul>
+            </article>
+
+            <article class="xp-panel">
+              <p class="xp-meta">Jun 2024 – Jul 2025 · Toronto, Ontario · Client: major Canadian bank</p>
+              <h3>Java Systems Developer</h3>
+              <p class="xp-employer">Allevar Inc.</p>
+              <ul class="xp-points">
+                <li>Engineered Spring Boot REST APIs for fraud detection, fraud alerting, and authentication.</li>
+                <li>Built Kafka producers, consumers, and Avro contracts for OTP and fraud-notification pipelines, with retry, DLQ, and offset-based replay.</li>
+                <li>Tuned MongoDB models and indexes; containerized services for Kubernetes and OpenShift.</li>
+              </ul>
+              <ul class="chips" aria-label="Skills"><li>Kafka &amp; Avro</li><li>MongoDB</li><li>Kubernetes</li></ul>
+            </article>
+
+            <article class="xp-panel">
+              <p class="xp-meta">Jul 2025 – Present · Toronto, Ontario · Joined through Deloitte’s acquisition of Allevar</p>
+              <h3>Manager</h3>
+              <p class="xp-employer">Deloitte Canada</p>
+              <ul class="xp-points">
+                <li>Owned engineering delivery for fraud and authentication projects at a major Canadian bank.</li>
+                <li>Dev lead for sprint planning, estimates, pull-request approval, releases, and mentoring.</li>
+                <li>Migrated fraud services from JBoss on RHEL to Azure: Java 8 to 11, Terraform, Vault, and Redis.</li>
+                <li>Since 2026: built a Copilot Studio agent that books workplace seats through MCP tools, and interview engineers for client teams.</li>
+              </ul>
+              <p class="xp-award">Deloitte Supernova award</p>
+              <ul class="chips" aria-label="Skills"><li>Azure</li><li>Terraform &amp; Vault</li><li>Redis</li><li>AI agents</li></ul>
+            </article>
+          </div>
+
+          <div class="xp-toolkit" aria-hidden="true">
+            <p class="xp-toolkit-label">Skills, as each role added them</p>
+            <ul>
+              <li data-step="0">Java</li><li data-step="0" style="--d:.06s">SQL</li>
+              <li data-step="1">Spring MVC</li><li data-step="1" style="--d:.06s">REST &amp; SOAP</li><li data-step="1" style="--d:.12s">MySQL</li>
+              <li data-step="2">Project management</li><li data-step="2" style="--d:.06s">Leadership</li>
+              <li data-step="3">Spring Boot</li><li data-step="3" style="--d:.06s">Angular</li><li data-step="3" style="--d:.12s">Microservices</li>
+              <li data-step="4">Kafka &amp; Avro</li><li data-step="4" style="--d:.06s">MongoDB</li><li data-step="4" style="--d:.12s">Kubernetes</li>
+              <li data-step="5">Azure</li><li data-step="5" style="--d:.06s">Terraform &amp; Vault</li><li data-step="5" style="--d:.12s">Redis</li><li data-step="5" style="--d:.18s">AI agents</li>
             </ul>
-        </nav>
-
-    </header>
-
-    <section class="banner">
-
-        <div class="details">
-            <p class="t1">
-                I am,
-            </p>
-            <p class="t2">
-                Susheel Kumar Raj Mondithoka
-            </p>
-            <p class="desc">
-                Java | Springboot | React | TypeScript
-            </p>
-            <button class="cta">
-                Contact Me
-            </button>
+          </div>
         </div>
-        <div class="person">
-            <img class="person-img" src="./image.png" alt="person" >
-        </div>
-
+      </div>
     </section>
 
-    <!-- services  -->
-
-        
-    <section class="services">
-
-        <h1 class="section-title">Services I Provide</h1>
-
-        <div class="section-child">
-
-            <div class="service">
-
-                <i class="fa-solid fa-laptop icon"></i>
-
-                <h2>Website Development</h2>
-
-                <p>Web Page . Hosting . Contact Form</p>
-
-                <p class="service-text">
-                    Starts From 120$
-                </p>
-
-                <button class="cta">View More</button>
-
-
+    <!-- Skills: grouped as they are used in delivery -->
+    <section class="skills" id="skills" aria-labelledby="skills-title">
+      <div class="wrap">
+        <p class="eyebrow">03 · Skills</p>
+        <h2 id="skills-title">Skills and tools</h2>
+        <div class="bento">
+          <article class="tile" data-span="7">
+            <h3>Event-driven systems</h3>
+            <p>Kafka with Avro contracts, IBM MQ, and asynchronous processing. Retry, dead-letter handling, and offset-based replay keep events recoverable when a dependency fails.</p>
+            <div class="viz kafka" aria-hidden="true">
+              <div class="lane"><span class="lane-name">payments</span><span class="lane-track"><i class="msg" style="--delay:0s;--rest:12cqw"></i><i class="msg" style="--delay:-2s;--rest:46cqw"></i><i class="msg" style="--delay:-4s;--rest:80cqw"></i></span></div>
+              <div class="lane"><span class="lane-name">auth.otp</span><span class="lane-track"><i class="msg alt" style="--delay:-1s;--rest:28cqw"></i><i class="msg fail" style="--delay:-3.4s;--rest:55cqw"></i><i class="msg alt" style="--delay:-5s;--rest:84cqw"></i></span></div>
+              <div class="lane"><span class="lane-name">fraud.alerts</span><span class="lane-track"><i class="msg" style="--delay:-.5s;--rest:20cqw"></i><i class="msg" style="--delay:-3.5s;--rest:64cqw"></i></span></div>
+              <div class="lane lane-dlq"><span class="lane-name">dlq → replay</span><span class="lane-track"><i class="msg dlq" style="--delay:-3.4s;--rest:72cqw"></i></span></div>
             </div>
-
-            <div class="service">
-
-                <i class="fa-brands fa-app-store-ios icon"></i>
-
-                <h2>App Development</h2>
-
-                <p>Web Page . Hosting . Contact Form</p>
-
-                <p class="service-text">
-                    Starts from 200$
-                </p>
-
-                <button class="cta">View More</button>
-
-
-            </div>
-
-
-            <div class="service">
-
-                <i class="fa-brands fa-google icon"></i>
-
-                <h2>SEO OPTIMIZATION</h2>
-
-                <p>Web Page . Hosting . Contact Form</p>
-
-                <p class="service-text">
-                    Starts From 100$
-                </p>
-
-                <button class="cta">View More</button>
-
-
-            </div>
-
-            <div class="service">
-
-                <i class="fa-brands fa-instagram icon"></i>
-
-                <h2>Digital Marketing</h2>
-
-                <p>Web Page . Hosting . Contact Form</p>
-
-                <p class="service-text">
-                    Starts  From 40$
-                </p>
-
-                <button class="cta">View More</button>
-
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-<!-- achievements  -->
-
-
-    <section class="achievements">
-
-        <div class="section-child achievements-child">
-
-            <div class="achievement">
-
-                <p class="number">200+</p>
-                <p class="tag">Satisfied Clients</p>
-
-            </div>
-
-            <div class="achievement">
-
-                <p class="number">378+</p>
-                <p class="tag">Projects Delivered</p>
-
-            </div>
-
-            <div class="achievement">
-
-                <p class="number">3000+</p>
-                <p class="tag">Github Commits</p>
-
-            </div>
-
-            <div class="achievement">
-
-                <p class="number">20+</p>
-                <p class="tag">Countries Covered</p>
-
-            </div>
-
-            <div class="achievement">
-
-                <p class="number">600+</p>
-                <p class="tag">Employees</p>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-<!-- quote section  -->
-
-    <section class="quote">
-        
-        <div class="overlay">
-
-            <div class="quote-area">
-
-                <input type="text" class="inp-email" placeholder="Enter Your Email">
-
-                <button class="cta">Get Quote</button>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-<!-- clients  -->
-
-    
-<section class="clients">
-
-    <h1 class="section-title">Our Clients</h1>
-
-    <div class="section-child client-section-child">
-
-        <img class="client-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/2560px-Microsoft_logo_%282012%29.svg.png" alt="client">
-        <img class="client-img" src="https://logos-download.com/wp-content/uploads/2022/01/Deloitte_Digital_Logo.png" alt="client">
-        <img class="client-img" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="client">
-        <img class="client-img" src="https://www.pngmart.com/files/10/Apple-Logo-PNG-Photos.png" alt="client">
-        <img class="client-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Meta_Platforms_Inc._logo.svg/948px-Meta_Platforms_Inc._logo.svg.png" alt="client">
-        <img class="client-img" src="https://companieslogo.com/img/orig/WIT_BIG-0de2dc21.png?t=1648406781" alt="client">
-
-
-    </div>
-
-</section>
-
-
-<!-- footer  -->
-
-<footer class="footer">
-
-    <div class="section-child">
-
-        <div class="footer-child">
-
-            <h3>Quick Links</h3>
-
-            <ul class="footer-list">
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Contact</li>
-                <li>Portfolio</li>
-                <li>Pricing</li>
-                <li>Clients</li>
-                <li>Subscription</li>
+          </article>
+
+          <article class="tile" data-span="5">
+            <h3>Delivery &amp; leadership</h3>
+            <ul class="tile-list">
+              <li>Work planning and effort estimation</li>
+              <li>Task allocation and dependency tracking</li>
+              <li>Design reviews and code approval</li>
+              <li>Release coordination and sequencing</li>
+              <li>Mentoring and technical interviewing</li>
+              <li>Proposal team sizing</li>
             </ul>
+          </article>
 
+          <article class="tile" data-span="5">
+            <h3>Cloud migration</h3>
+            <p>Moved services from JBoss on RHEL to Azure, with Terraform, HashiCorp Vault, Docker, Kubernetes, and OpenShift.</p>
+            <div class="viz migrate" aria-hidden="true">
+              <span class="host host-old"><span class="host-label">JBoss · RHEL</span></span>
+              <span class="mig-path"></span>
+              <span class="host host-new"><span class="host-label">Azure</span></span>
+              <i class="svc" style="--row:0;--delay:0s"><b>Java 8</b><b>Java 11</b></i>
+              <i class="svc" style="--row:1;--delay:-2.5s"><b>Java 8</b><b>Java 11</b></i>
+              <i class="svc" style="--row:2;--delay:-5s"><b>Java 8</b><b>Java 11</b></i>
+            </div>
+          </article>
+
+          <article class="tile" data-span="7">
+            <h3>Java platforms</h3>
+            <p>Services, APIs, and data access for regulated banking workloads.</p>
+            <ul class="chips"><li>Java 8 / 11 / 17</li><li>Spring Boot</li><li>Spring Security</li><li>REST APIs</li><li>Microservices</li><li>Hibernate / JPA</li><li>MongoDB</li><li>Redis</li><li>MSSQL</li><li>MySQL</li><li>Angular</li><li>TypeScript</li></ul>
+          </article>
+
+          <article class="tile" data-span="4">
+            <h3>Applied AI</h3>
+            <p>Retrieval-augmented generation: ingestion, embeddings, vector retrieval, and prompt orchestration. Copilot Studio agents with MCP tools, and agent evaluation.</p>
+          </article>
+
+          <article class="tile" data-span="4">
+            <h3>Observability</h3>
+            <p>Splunk, Datadog, Dynatrace, Grafana, Kibana, and Kpow for tracing event flows and production triage.</p>
+          </article>
+
+          <article class="tile" data-span="4">
+            <h3>Security</h3>
+            <p>OAuth2, JWT, HashiCorp Vault, SSL certificates, and secure API and integration practices.</p>
+          </article>
+
+          <article class="tile" data-span="6">
+            <h3>Build and quality</h3>
+            <p>Maven, Gradle, Jenkins, GitHub Actions, Git, and Bitbucket. JUnit 5, Mockito, SonarQube quality gates, and test-driven development.</p>
+          </article>
+
+          <article class="tile" data-span="6">
+            <h3>Learning</h3>
+            <p>Databricks Academy: Building Single-Agent Applications, and Generative AI Deployment and Monitoring. Azure Administrator Associate (AZ-104) in progress.</p>
+          </article>
         </div>
+      </div>
+    </section>
 
-        <div class="footer-child">
+    <!-- Selected work: what each build does, shown rather than described -->
+    <section class="work" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <p class="eyebrow">04 · Selected work</p>
+        <h2 id="work-title">Selected work</h2>
+        <p class="section-sub">Builds alongside client delivery.</p>
+        <div class="cards">
+          <article class="card">
+            <div class="card-viz viz agent" aria-hidden="true">
+              <p class="bubble bubble-user">@SRA book me a desk for Thursday</p>
+              <p class="tool"><span class="tool-tag">MCP tool</span>book_seat(day: "Thu")</p>
+              <p class="bubble bubble-bot">Done. Your desk is confirmed for Thursday.</p>
+            </div>
+            <div class="card-body">
+              <p class="card-kicker">Copilot Studio · MCP</p>
+              <h3>Seat-booking agent</h3>
+              <p>An agent people @mention to book workplace seats. It calls the booking system through MCP tools, and its responses are checked with Copilot Studio’s evaluation and testing.</p>
+              <p class="card-foot"><span>Built at Deloitte</span></p>
+            </div>
+          </article>
 
-            <h3>Contact info</h3>
+          <article class="card">
+            <div class="card-viz viz listen" aria-hidden="true">
+              <p class="pipe">POST /capture <b>→</b> Whisper <b>→</b> 2026-11-24.md</p>
+              <div class="wave">
+                <i style="--h:.35"></i><i style="--h:.6"></i><i style="--h:.9"></i><i style="--h:.5"></i><i style="--h:.75"></i><i style="--h:.4"></i><i style="--h:.95"></i><i style="--h:.65"></i><i style="--h:.3"></i><i style="--h:.8"></i><i style="--h:.55"></i><i style="--h:.7"></i><i style="--h:.45"></i><i style="--h:.85"></i><i style="--h:.5"></i><i style="--h:.3"></i><i style="--h:.65"></i><i style="--h:.9"></i><i style="--h:.4"></i><i style="--h:.75"></i><i style="--h:.55"></i><i style="--h:.35"></i><i style="--h:.6"></i><i style="--h:.45"></i>
+              </div>
+              <p class="transcript"><span class="ts">## 09:41</span> <span class="typed">Review the retry policy before Friday’s release.</span></p>
+            </div>
+            <div class="card-body">
+              <p class="card-kicker">Java · Spring Boot · Whisper</p>
+              <h3>ListenerApp</h3>
+              <p>A voice-note capture service. It receives audio at POST /capture, transcribes it with OpenAI Whisper, and appends a timestamped Markdown entry to a GitHub repository, with retries and a dead-letter folder for failed calls.</p>
+              <p class="card-foot"><a class="card-link" href="https://github.com/susheel009/ListenerApp">View on GitHub</a></p>
+            </div>
+          </article>
 
-            <ul class="footer-list">
-                <li>
-                    Dreyer Drive East, Ajax, Ontario - L1S 1J6
-                </li>
-                <li>
-                    +1-289-638-9576
-                </li>
-                <li>
-                    +1-437-228-0777
-                </li>
-                <li>
-                    susheel.raj36@gmail.com
-                </li>
-               
-            </ul>
+          <article class="card">
+            <div class="card-viz viz rag" aria-hidden="true">
+              <p class="rag-q"><span>Q</span>What happens when a downstream call fails?</p>
+              <div class="rag-docs"><i>runbook.md</i><i class="hit">retry-policy.md</i><i>adr-012.md</i><i class="hit">dlq-replay.md</i></div>
+              <p class="rag-a">Retries back off, then the event goes to the DLQ for replay. <sup>1</sup><sup>2</sup></p>
+            </div>
+            <div class="card-body">
+              <p class="card-kicker">Retrieval · Embeddings · LLM</p>
+              <h3>Personal RAG application</h3>
+              <p>Document ingestion, embeddings, vector retrieval, and prompt orchestration, with answers generated from the retrieved text.</p>
+              <p class="card-foot"><span>Source not public</span></p>
+            </div>
+          </article>
 
+          <article class="card">
+            <div class="card-viz viz pay" aria-hidden="true">
+              <div class="pay-table">
+                <span class="pay-h">Pay period</span><span class="pay-h num">Hours</span><span class="pay-h">Week</span><span class="pay-h num">Hours</span>
+                <span class="pay-row">Oct 01 – Oct 14</span><span class="pay-row num">80.00</span><span class="pay-row">W40</span><span class="pay-row num" data-to="40">40.00</span>
+                <span class="pay-row"></span><span class="pay-row"></span><span class="pay-row">W41</span><span class="pay-row num" data-to="40">40.00</span>
+                <span class="pay-row">Oct 15 – Oct 28</span><span class="pay-row num">76.50</span><span class="pay-row">W42</span><span class="pay-row num" data-to="38.25">38.25</span>
+                <span class="pay-row"></span><span class="pay-row"></span><span class="pay-row">W43</span><span class="pay-row num" data-to="38.25">38.25</span>
+                <span class="pay-total"></span><span class="pay-total"></span><span class="pay-total">Total</span><span class="pay-total num" data-to="156.5">156.50</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <p class="card-kicker">Java 21 · PDF · Tesseract OCR</p>
+              <h3>Payslip hours aggregator</h3>
+              <p>A command-line tool that reads payslip PDFs, including scanned ones, splits bi-weekly periods into weeks, and prints the hours as a table.</p>
+              <p class="card-foot"><a class="card-link" href="https://github.com/susheel009/payslip-hours-aggregator">View on GitHub</a></p>
+            </div>
+          </article>
         </div>
+        <p class="more">More on GitHub:
+          <a href="https://github.com/susheel009/Kafka-cheat-sheet">Kafka CLI cheat sheet</a>
+          <a href="https://github.com/susheel009/CornerStone">CornerStone, an Android app in Kotlin</a>
+          <a href="https://github.com/susheel009?tab=repositories">All repositories</a>
+        </p>
+      </div>
+    </section>
 
-
-        <div class="footer-child map">
-
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5124.30871344572!2d-79.00916782416166!3d43.83154369303131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4e07d53fb8241%3A0x7ff2598f5fb0d93!2sDreyer%20Dr%20E%2C%20Ajax%2C%20ON!5e0!3m2!1sen!2sca!4v1714176513105!5m2!1sen!2sca" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+    <!-- Résumé and contact -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <p class="eyebrow">05 · Résumé &amp; contact</p>
+        <h2 id="contact-title">Résumé and contact</h2>
+        <div class="contact-grid">
+          <div class="contact-links">
+            <p class="contact-note">Based in Toronto, Ontario.</p>
+            <a href="mailto:susheel.raj36@gmail.com"><span>Email</span><span class="contact-v">susheel.raj36@gmail.com</span></a>
+            <a href="https://github.com/susheel009" rel="me"><span>GitHub</span><span class="contact-v">github.com/susheel009</span></a>
+          </div>
+          <div class="doc-card">
+            <div class="doc-preview" aria-hidden="true"><b></b><i style="--w:62%"></i><i style="--w:88%"></i><i style="--w:74%"></i><i style="--w:92%"></i><i style="--w:55%"></i><i style="--w:81%"></i><i style="--w:68%"></i></div>
+            <div>
+              <p class="doc-title">Résumé</p>
+              <p class="doc-meta">PDF · 2 pages · Updated November 2026</p>
+            </div>
+            <a class="button button-dark" href="assets/files/Susheel-Mondithoka-Resume.pdf" download>
+              Download résumé
+              <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v8m0 0 3.5-3.5M8 10 4.5 6.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+          <div class="qr-card">
+            <div class="qr-wrap">
+              <img src="assets/img/github-qr.svg" alt="QR code linking to github.com/susheel009 repositories" width="200" height="200">
+              <span class="qr-scan" aria-hidden="true"></span>
+            </div>
+            <p class="doc-title">Scan for GitHub</p>
+            <p class="doc-meta">github.com/susheel009 · repositories</p>
+          </div>
         </div>
+      </div>
+    </section>
+  </main>
 
-    </div>
-
-</footer>
-
-
-
-
+  <footer class="foot">
+    <p>© <span data-year>2026</span> Susheel Mondithoka</p>
+    <p>Built with HTML, CSS, GSAP and Lenis. Set in Newsreader and IBM Plex.</p>
+    <p><a href="#top">Back to top ↑</a></p>
+  </footer>
 </body>
 </html>

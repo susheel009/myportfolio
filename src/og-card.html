@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <title>Social card source</title>
+  <!-- Source for assets/img/og-card.png (1200×630), the preview LinkedIn shows when the link is shared. -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500&family=Newsreader:opsz,wght@6..72,400&display=swap">
+  <style>
+    html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; background: #0e1412; color: #e8eee9; font-family: "IBM Plex Sans", sans-serif; }
+    .card { position: relative; box-sizing: border-box; width: 1200px; height: 630px; display: grid; grid-template-columns: 1fr 300px; align-items: center; gap: 56px; padding: 0 88px; }
+    .card::before {
+      content: ""; position: absolute; inset: 0;
+      background:
+        radial-gradient(520px circle at 78% 46%, rgba(125, 206, 165, .14), transparent 62%),
+        linear-gradient(rgba(232, 238, 233, .07) 1px, transparent 1px) 0 0 / 60px 60px,
+        linear-gradient(90deg, rgba(232, 238, 233, .07) 1px, transparent 1px) 0 0 / 60px 60px;
+      -webkit-mask-image: radial-gradient(ellipse 75% 85% at 68% 50%, #000 25%, transparent 78%);
+    }
+    .copy { position: relative; }
+    .eyebrow { margin: 0 0 26px; font: 500 20px/1 "IBM Plex Mono", monospace; letter-spacing: .14em; text-transform: uppercase; color: #7dcea5; }
+    h1 { margin: 0 0 26px; font: 400 104px/.95 "Newsreader", serif; letter-spacing: -.035em; }
+    .sub { margin: 0; font-size: 28px; color: rgba(232, 238, 233, .76); }
+    .chips { display: flex; gap: 12px; margin-top: 34px; }
+    .chips span { padding: 9px 16px; border-radius: 999px; background: rgba(125, 206, 165, .12); color: #7dcea5; font: 500 18px/1 "IBM Plex Mono", monospace; }
+    .photo { position: relative; width: 280px; height: 280px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 6px #0e1412, 0 0 0 9px #7dcea5; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="copy">
+      <p class="eyebrow">Engineering Manager · Toronto</p>
+      <h1>Susheel<br>Mondithoka</h1>
+      <p class="sub">Distributed systems and applied AI for banking platforms.</p>
+      <div class="chips"><span>Java</span><span>Kafka</span><span>Azure</span><span>AI agents</span></div>
+    </div>
+    <img class="photo" src="../assets/img/portrait.jpg" alt="">
+  </div>
+</body>
+</html>

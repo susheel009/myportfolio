@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <title>Susheel Mondithoka — Résumé</title>
+  <!-- Source for assets/files/Susheel-Mondithoka-Resume.pdf. Public version: no client names,
+       internal system names, or unverified figures. Edit here, then regenerate the PDF. -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500&display=swap">
+  <style>
+    @page { size: Letter; }
+    body { margin: 0; color: #16201b; font: 400 8.9pt/1.36 "IBM Plex Sans", Arial, sans-serif; }
+    p { margin: 0; }
+    a { color: inherit; text-decoration: none; }
+    header { display: flex; justify-content: space-between; align-items: flex-end; gap: 24pt; padding-bottom: 10pt; border-bottom: 1.2pt solid #1d5c44; }
+    h1 { margin: 0; font: 500 24pt/1 "Newsreader", Georgia, serif; letter-spacing: -.01em; }
+    .role { margin-top: 5pt; font-weight: 500; color: #1d5c44; }
+    .contact { text-align: right; font-size: 8.6pt; line-height: 1.5; color: #3d4741; }
+    h2 { margin: 11pt 0 5pt; font: 600 8pt/1 "IBM Plex Sans", Arial, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: #1d5c44; }
+    .job { margin-bottom: 7pt; }
+    .job-head { display: flex; justify-content: space-between; gap: 12pt; }
+    .job-title { font-weight: 600; }
+    .org { color: #3d4741; }
+    .dates { white-space: nowrap; color: #56605a; font-size: 8.8pt; }
+    .note { color: #56605a; font-size: 8.8pt; }
+    .sub { margin: 5pt 0 1pt; font-weight: 500; font-size: 8.8pt; color: #1d5c44; break-after: avoid; }
+    ul { margin: 3pt 0 0; padding-left: 12pt; }
+    li { margin: 1.1pt 0; }
+    li, .job-head { break-inside: avoid; }
+    dl { display: grid; grid-template-columns: 1.35in 1fr; gap: 2.5pt 10pt; margin: 0; }
+    dt { font-weight: 600; }
+    dd { margin: 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Susheel Mondithoka</h1>
+      <p class="role">Engineering Manager · Distributed Systems &amp; AI</p>
+    </div>
+    <div class="contact">Toronto, Ontario<br>susheel.raj36@gmail.com<br>github.com/susheel009<br>susheel009.github.io/myportfolio</div>
+  </header>
+
+  <h2>Summary</h2>
+  <p>Engineering manager with a background in enterprise Java and banking platforms, focused on fraud detection, authentication, payments, and enterprise integration. Dev lead on a shared fraud-services platform at a major Canadian bank: planning, estimates, code approval, release sequencing, and mentoring. Now applying this integration background to AI agents and retrieval.</p>
+
+  <h2>Experience</h2>
+  <div class="job">
+    <div class="job-head"><p><span class="job-title">Manager</span> · <span class="org">Deloitte Canada, Toronto, ON</span></p><p class="dates">Jul 2025 – Present</p></div>
+    <p class="note">Joined through Deloitte’s acquisition of Allevar and continued the banking engagement.</p>
+    <p class="sub">Fraud engineering, major Canadian bank · Jul 2025 – Mar 2026</p>
+    <ul>
+      <li>Owned engineering delivery for fraud and authentication projects on a shared platform of reusable microservices: fraud adapter, event handlers, enrichment, decisioning, and retry and response handling.</li>
+      <li>Contributed to sprint planning, estimates, and task allocation; held pull-request approval as a member of the dev-lead group; mentored engineers, including interns.</li>
+      <li>Migrated fraud services from JBoss on RHEL to Azure, including Java 8-to-11 upgrades, Terraform deployment configuration, HashiCorp Vault integration, and Redis changes.</li>
+      <li>Designed a 3-D Secure one-time-passcode authentication flow: session handling, OTP generation and validation, English and French journeys, retry and timeout controls, and biometric in-app authentication.</li>
+      <li>Designed Kafka and Avro flows for transfer, OTP, and notification events, mapped to a canonical model and decision contracts.</li>
+      <li>Replaced Hazelcast session state with Redis, using TTL caching and composite keys to correlate split and batch transactions for account-level fraud scoring.</li>
+      <li>Coordinated release versioning, cherry-picks, and deployment sequencing; helped move PowerMock tests to JUnit 5 and Mockito, and added SonarQube quality gates and GitHub workflow checks.</li>
+      <li>Recognition: Deloitte Supernova award for fraud-engineering contributions.</li>
+    </ul>
+    <p class="sub">Practice and applied AI · Mar 2026 – Present</p>
+    <ul>
+      <li>Built a self-initiated Copilot Studio agent that books workplace seats through MCP tool calls, and audited its responses with Copilot Studio evaluation and testing.</li>
+      <li>Built a personal RAG application: document ingestion, embeddings, vector retrieval, prompt orchestration, and LLM-assisted answers.</li>
+      <li>Completed Databricks Academy courses in single-agent applications and Generative AI deployment and monitoring; studying agent evaluation, confidence-based routing, and production monitoring.</li>
+      <li>Conducted technical interviews on Java, microservices, and event-driven architecture for client engagements; proposed team structure and sizing for an RFP response.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head"><p><span class="job-title">Java Systems Developer</span> · <span class="org">Allevar Inc. (acquired by Deloitte), Toronto, ON</span></p><p class="dates">Jun 2024 – Jul 2025</p></div>
+    <p class="note">Client: major Canadian bank, fraud engineering.</p>
+    <ul>
+      <li>Engineered Java and Spring Boot REST APIs for fraud detection, fraud alerting, and authentication services.</li>
+      <li>Contributed to a 3-D Secure OTP implementation supporting step-up authentication, in-app notifications, and biometric flows.</li>
+      <li>Developed Kafka producers and consumers and Avro schemas to enforce data contracts for OTP and fraud-notification pipelines.</li>
+      <li>Implemented retry, DLQ handling, and offset-based replay to reprocess events safely during downstream failures.</li>
+      <li>Designed MongoDB document models and indexes, and tuned slow-running queries.</li>
+      <li>Containerized services with Docker for Kubernetes and OpenShift; practiced TDD with JUnit and Mockito; monitored Kafka topics with Splunk and Kpow.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head"><p><span class="job-title">Full Stack Java Developer</span> · <span class="org">Scadea Software Solutions, Mississauga, ON</span></p><p class="dates">Sep 2022 – Jan 2024</p></div>
+    <p class="note">Client: global bank.</p>
+    <ul>
+      <li>Built an Angular 11 and Spring Boot compliance dashboard for loan-processing units, automating compliance tracking and reporting.</li>
+      <li>Contributed to the maintenance and gradual modernization of a legacy banking platform, integrating a monolith with microservices.</li>
+      <li>Resolved backend incidents, code-review findings, and problem reports across multiple banking modules.</li>
+      <li>Implemented Splunk for legacy logging and Kibana with Elasticsearch for microservices observability.</li>
+      <li>Supported MSSQL operations and SSIS ETL workflows, CI/CD with Jenkins, and testing with Postman, JUnit, Mockito, and SonarQube.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head"><p><span class="job-title">Software Analyst / Developer</span> · <span class="org">Horizon Informatic Services, Hyderabad, India</span></p><p class="dates">Feb 2017 – Feb 2020</p></div>
+    <ul>
+      <li>Developed Java services using Spring MVC and core Spring for transactional workflows across internal enterprise applications.</li>
+      <li>Built REST and SOAP integrations for data exchange between upstream and downstream systems.</li>
+      <li>Designed and maintained MySQL schemas, indexes, and queries; implemented Spring Security and token-based access controls.</li>
+      <li>Contributed to defect resolution, root-cause analysis, and production support in Agile teams.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head"><p><span class="job-title">Analyst / Developer</span> · <span class="org">Zack IT Solutions, Hyderabad, India</span></p><p class="dates">Apr 2016 – Jan 2017</p></div>
+    <ul>
+      <li>Supported Java application development and operations: bug fixes, small enhancements, SQL queries, and data-processing tasks.</li>
+      <li>Assisted with service integration, validating requests and responses and troubleshooting across dependent systems.</li>
+      <li>Prepared technical documentation and supported releases in an Agile team.</li>
+    </ul>
+  </div>
+
+  <h2>Education</h2>
+  <div class="job">
+    <div class="job-head"><p><span class="job-title">PG Diploma, Project Management and Advanced Leadership Skills</span> · <span class="org">Lambton College, Toronto</span></p><p class="dates">Mar 2020 – May 2022</p></div>
+    <div class="job-head"><p><span class="job-title">Bachelor’s Degree</span> · <span class="org">Aurora Scientific and Technological Institute, Hyderabad, India</span></p><p class="dates">May 2011 – Jan 2016</p></div>
+  </div>
+
+  <h2>Training and certification</h2>
+  <ul>
+    <li>Databricks Academy — Building Single-Agent Applications on Databricks (completed)</li>
+    <li>Databricks Academy — Generative AI Deployment and Monitoring (completed)</li>
+    <li>Microsoft Azure Administrator Associate (AZ-104) — in progress</li>
+  </ul>
+
+  <h2>Skills</h2>
+  <dl>
+    <dt>Languages</dt><dd>Java 8 / 11 / 17, SQL, JavaScript, TypeScript</dd>
+    <dt>Architecture</dt><dd>Spring Boot, Spring MVC, Spring Security, REST APIs, microservices, event-driven architecture, API design, integration patterns</dd>
+    <dt>Messaging</dt><dd>Apache Kafka, IBM MQ, Avro, SOAP, schema-driven event contracts, asynchronous processing</dd>
+    <dt>Cloud and DevOps</dt><dd>Azure, OpenShift, Docker, Kubernetes, Terraform, Jenkins, GitHub Actions, Maven, Gradle, Git, Bitbucket</dd>
+    <dt>Data</dt><dd>MongoDB, MSSQL, MySQL, Redis; Spring Data, Hibernate, JPA, JDBC</dd>
+    <dt>Security</dt><dd>OAuth2, JWT, HashiCorp Vault, SSL certificates, secure API and integration practices</dd>
+    <dt>Observability</dt><dd>Splunk, Datadog, Dynatrace, Grafana, Kibana, Kpow; production triage</dd>
+    <dt>Applied AI</dt><dd>RAG, document ingestion, embeddings, vector retrieval, prompt orchestration; Copilot Studio agents, MCP tools, agent evaluation</dd>
+    <dt>Delivery</dt><dd>Work planning, estimation, task allocation, dependency tracking, stakeholder coordination, design reviews, code approval, release coordination, mentoring, technical interviewing</dd>
+    <dt>Spoken languages</dt><dd>English, Telugu, Tamil, Hindi</dd>
+  </dl>
+
+  <h2>Selected projects</h2>
+  <ul>
+    <li><strong>ListenerApp</strong> — Spring Boot voice-note capture service: Whisper transcription to timestamped Markdown in GitHub, with retries and a dead-letter folder. github.com/susheel009/ListenerApp</li>
+    <li><strong>Payslip hours aggregator</strong> — Java 21 command-line tool that parses text and scanned payslip PDFs (Tesseract OCR) and splits hours by week. github.com/susheel009/payslip-hours-aggregator</li>
+  </ul>
+</body>
+</html>
