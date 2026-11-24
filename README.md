@@ -25,6 +25,8 @@ It is a static site with no build step. GitHub Pages serves the repository root.
 - To regenerate the PDF, social card, and QR code: `cd tools && npm install && npm run assets`.
 - To check layout at 1440, 1366, 834, and 390 px and in reduced motion: `npm run qa` (screenshots go to `tools/.qa-shots/`).
   Set `CHROME_PATH` if Edge is not at its default Windows path.
+- To check real phone engines (Android Blink and iPhone WebKit, with touch): run `npx playwright-core install webkit` once, then `npm run qa:mobile`.
+  Set `BASE=https://susheel009.github.io/myportfolio/` to check the live site. It flags text that is on screen but invisible, anything wider than the screen, and console errors.
 
 ## Motion and accessibility
 

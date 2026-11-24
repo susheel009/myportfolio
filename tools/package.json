@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "assets": "node make-assets.mjs",
-    "qa": "node qa.mjs"
+    "qa": "node qa.mjs",
+    "qa:mobile": "node mobile-check.mjs"
   },
   "devDependencies": {
     "jsqr": "^1.4.0",
