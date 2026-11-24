@@ -540,9 +540,21 @@ h2 { font-size: clamp(2.4rem, 5vw, 4.2rem); line-height: 1.02; }
 .foot a { color: var(--ink-2); text-decoration: none; }
 .foot a:hover { color: var(--pine); }
 
+/* Entrance pending (see the inline script in <head>); site.js removes the class once it has taken over. */
+html.is-loading .hero-title .line > span,
+html.is-loading .hero .eyebrow,
+html.is-loading .hero-lede,
+html.is-loading .hero-actions,
+html.is-loading .glance,
+html.is-loading .scroll-cue { visibility: hidden; }
+
+/* Payslip demo: keep the week column clear of the hours column beside it */
+.pay-table > span:nth-child(4n+3) { padding-left: 14px; }
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 1100px) {
+  .scroll-cue { display: none; } /* the stacked hero is taller than the screen; the cue would float mid-page */
   .hero-inner { grid-template-columns: 1fr; }
   .hero-side { max-width: 560px; }
   .tile, .tile[data-span] { grid-column: span 6; }
@@ -560,7 +572,13 @@ h2 { font-size: clamp(2.4rem, 5vw, 4.2rem); line-height: 1.02; }
   .pill { margin-left: auto; }
   .tile, .tile[data-span], .tile[data-span="7"] { grid-column: span 12; }
   .contact-grid { grid-template-columns: 1fr; }
-  .hero { padding-bottom: 96px; }
+  .hero { padding: calc(var(--nav-h) + 32px) 0 64px; }
+  .button-xp { display: none; } /* two actions fit one row on a phone; Experience is the next thing down anyway */
+  .statement, .skills, .work, .contact { padding: 72px 0; }
+  .xp-stage { padding: 72px 0; }
+  .facts { margin-top: 40px; }
+  .xp-sub { margin-bottom: 32px; }
+  .bento, .cards, .contact-grid { margin-top: 32px; }
   .glance-list > div { grid-template-columns: 88px 1fr; }
   .card-viz { padding: 20px; }
   .rag-docs { grid-template-columns: repeat(2, minmax(0, 1fr)); }

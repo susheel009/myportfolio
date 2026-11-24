@@ -50,12 +50,17 @@
 
   /* ---------- Hero: name rises in, the summary card settles, then yields to the page ---------- */
   mm.add('(prefers-reduced-motion: no-preference)', () => {
-    gsap.timeline({ defaults: { ease: 'expo.out' } })
+    // Built paused so the start states apply at once; plays when the display font has arrived
+    // (or after 700 ms), so the name never animates in a fallback font and then swaps.
+    const intro = gsap.timeline({ paused: true, defaults: { ease: 'expo.out' } })
       .from('.hero-title .line > span', { yPercent: 108, duration: 1.25, stagger: 0.09 })
       .from(['.hero .eyebrow', '.hero-lede', '.hero-actions'], { y: 22, autoAlpha: 0, duration: 1, stagger: 0.08 }, 0.2)
       .from('.glance', { y: 48, autoAlpha: 0, duration: 1.3 }, 0.3)
       .from('.glance-list > div', { x: 16, autoAlpha: 0, duration: 0.8, stagger: 0.06 }, 0.6)
       .from('.scroll-cue', { autoAlpha: 0, duration: 0.8 }, 1);
+    root.classList.remove('is-loading');
+    const fontsReady = document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve();
+    Promise.race([fontsReady, new Promise((resolve) => { setTimeout(resolve, 700); })]).then(() => intro.play());
 
     // On wide screens the hero hands off to the page with a little depth; on phones it simply scrolls.
     if (window.matchMedia('(min-width: 1024px)').matches) {
@@ -89,14 +94,23 @@
     };
   });
 
-  /* ---------- Profile: the summary lights up word by word at reading pace ---------- */
-  mm.add('(prefers-reduced-motion: no-preference)', () => {
+  /* ---------- Profile: on wide screens the summary lights up word by word at reading pace.
+     On phones the paragraph is taller than half the screen, so readers stop mid-way and
+     half-lit text looks unloaded; there it simply fades in, fully lit. ---------- */
+  mm.add({
+    wide: '(min-width: 901px) and (prefers-reduced-motion: no-preference)',
+    narrow: '(max-width: 900px) and (prefers-reduced-motion: no-preference)',
+  }, (context) => {
     const text = document.querySelector('.statement-text');
-    if (!text || !SplitText) return undefined;
+    if (!text) return undefined;
+    if (context.conditions.narrow || !SplitText) {
+      gsap.from(text, { y: 24, autoAlpha: 0, duration: 1, ease: 'expo.out', scrollTrigger: { trigger: text, start: 'top 94%' } });
+      return undefined;
+    }
     const split = SplitText.create(text, { type: 'words' });
-    gsap.fromTo(split.words, { opacity: 0.14 }, {
+    gsap.fromTo(split.words, { opacity: 0.22 }, {
       opacity: 1, ease: 'none', stagger: 0.1,
-      scrollTrigger: { trigger: text, start: 'top 80%', end: 'bottom 45%', scrub: 0.5 },
+      scrollTrigger: { trigger: text, start: 'top 82%', end: 'bottom 62%', scrub: 0.4 },
     });
     return () => split.revert();
   });
@@ -113,8 +127,8 @@
     if (!pin) {
       if (motion) {
         panels.forEach((panel) => gsap.from(panel, {
-          y: 28, autoAlpha: 0, duration: 0.9, ease: 'expo.out',
-          scrollTrigger: { trigger: panel, start: 'top 88%' },
+          y: 24, autoAlpha: 0, duration: 0.9, ease: 'expo.out',
+          scrollTrigger: { trigger: panel, start: 'top 96%' },
         }));
       }
       return undefined;
@@ -195,9 +209,9 @@
     const reveal = (selector) => {
       const els = gsap.utils.toArray(selector);
       if (!els.length) return;
-      gsap.set(els, { y: 32, autoAlpha: 0 });
+      gsap.set(els, { y: 24, autoAlpha: 0 });
       ScrollTrigger.batch(els, {
-        start: 'top 90%',
+        start: 'top 96%', // reveal as soon as it enters, so the bottom of the screen is never blank
         once: true,
         onEnter: (batch) => gsap.to(batch, {
           y: 0, autoAlpha: 1, duration: 1, ease: 'expo.out', stagger: 0.08, overwrite: true,

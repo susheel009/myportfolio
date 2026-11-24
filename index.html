@@ -18,6 +18,16 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#0e1412">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <script>
+    /* Hide the hero until the entrance animation is ready (prevents a flash on slow connections).
+       Fails open: the class is removed after 3 s even if scripts never run. */
+    (function (d) {
+      if (window.matchMedia && matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+        d.classList.add('is-loading');
+        setTimeout(function () { d.classList.remove('is-loading'); }, 3000);
+      }
+    })(document.documentElement);
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
@@ -65,7 +75,7 @@
               Download résumé
               <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v8m0 0 3.5-3.5M8 10 4.5 6.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
-            <a class="button" href="#experience">Experience</a>
+            <a class="button button-xp" href="#experience">Experience</a>
             <a class="button" href="https://github.com/susheel009" rel="me">
               GitHub
               <svg width="12" height="12" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5 11.5 4.5M6 4.5h5.5V10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
